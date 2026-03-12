@@ -8,10 +8,13 @@ terraform {
       source  = "hashicorp/azuread"
       version = "~> 3.0"
     }
+    github = {
+      source  = "integrations/github"
+      version = "~> 6.0"
+    }
   }
 }
 
-# Configure the Microsoft Azure Provider
 provider "azurerm" {
   subscription_id                 = var.subscription_id
   resource_provider_registrations = "none"
@@ -19,4 +22,8 @@ provider "azurerm" {
 }
 
 provider "azuread" {}
+
+provider "github" {
+  owner = var.github_owner
+}
 
