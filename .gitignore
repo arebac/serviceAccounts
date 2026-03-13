@@ -1,0 +1,44 @@
+# =======================
+# Terraform - SECRETS
+# =======================
+
+# Contains real values: subscription_id, storage account names, etc.
+terraform.tfvars
+*.tfvars
+*.tfvars.json
+
+# Terraform state - contains ALL resource details including secrets in plaintext
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Terraform internals - not needed in source control
+.terraform/
+
+# NOTE: .terraform.lock.hcl should be committed (ensures consistent provider versions)
+
+# Sensitive plan output (can contain secrets)
+*.tfplan
+
+# =======================
+# Environment Variables
+# =======================
+.env
+.env.*
+
+# =======================
+# General
+# =======================
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
